@@ -1,7 +1,39 @@
 ---
 layout: default
+team:
+ - name: Greg
+   bio: Big Boss Coder
+   description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque voluptate consequatur natus a veritatis.
+   profile_image: /images/profile-1.jpg
+ - name: Greg
+   bio: Big Boss Coder
+   description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque voluptate consequatur natus a veritatis.
+   profile_image: /images/profile-2.jpg
+ - name: Greg
+   bio: Big Boss Coder
+   description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque voluptate consequatur natus a veritatis.    
+   profile_image: /images/profile-3.jpg  
 ---
 
-<section>
-    About
-</section>
+<section class="tall-60 grid bg-green">
+    <div class="col-5-middle editable padded">
+        <h2> Meet our growing family</h2>   
+        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus ex ut, eaque ratione amet neque ipsum? Cupiditate ipsam voluptatem quia corporis repellendus inventore perspiciatis illum totam nihil maiores! Molestiae, consequuntur?</p>
+    </div>
+    <div class="col-7_sm-10 bg-image bg-plant "></div>
+</section> 
+
+<!-- Team members -->
+
+<section class="padded">
+    {% for item in page.team %}
+        <div class="grid">
+            <div class="col-5">
+                <img src="{{item.profile_image}}">
+                <h3> {{item.name}}</h3>
+                <p><strong>{{item.bio}}</strong></p>
+                <p>{{item.description}}</p>
+            </div>
+        </div>
+    {% enfor %}
+</section> 
