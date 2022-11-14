@@ -1,7 +1,36 @@
 ---
 layout: default
+header-image: /images/plant-2.jpg
 ---
 
-<section>
-    Contact
-</section>
+<!-- Header -->
+<section class="tall-60 grid bg-green">
+    <div class="col-7_sm-10 bg-image" style="background-image: url('{{page.header-image}}');"></div>
+    <div class="col-5-middle editable padded">
+        <h2> Get in touch </h2>   
+        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus ex ut, eaque ratione amet neque ipsum? Cupiditate ipsam voluptatem quia corporis repellendus inventore perspiciatis illum totam nihil maiores! Molestiae, consequuntur?</p>
+    </div>
+</section> 
+
+<section class="padded capped-width">
+    <h2>The personal touch</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat corrupti voluptatum tempora in animi fugit recusandae praesentium, reprehenderit nesciunt impedit reiciendis vel modi facere cum atque aliquid neque, dolor corporis?</p>
+
+<!------------ Basic Form ------------>
+  
+    <form   action="https://formspree.io/f/mqkwbvve" method="POST">
+      
+      <label for="_name">Your name</label>
+      <input type="text" name="_name" id="_name" placeholder="Name"/>
+      
+      <label for="_replyto">Your Email</label>
+      <input type="email" name="_replyto" id="_repylto" placeholder="Email"/>
+      
+      <label for="message">What's your story?</label>
+      <textarea name="message" id="message" placeholder="Hey I want to…"></textarea>
+      
+      <button type="submit" class="button">Get in touch</button>
+    
+    </form>
+    
+  </section>

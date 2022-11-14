@@ -1,7 +1,69 @@
 ---
 layout: default
+features:
+ - title: Beautiful designs
+   description: Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae ex minima aspernatur necessitatibus eligendi minus in ratione possimus eaque atque ipsa, similique totam, vero dolores ipsum repellendus labore at consequatur.
+   featured_image: /images/placeholder-project.png
+ - title: Effective development
+   description: Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae ex minima aspernatur necessitatibus eligendi minus in ratione possimus eaque atque ipsa, similique totam, vero dolores ipsum repellendus labore at consequatur.
+   featured_image: /images/placeholder-project.png
+ - title: Great team
+   description: Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae ex minima aspernatur necessitatibus eligendi minus in ratione possimus eaque atque ipsa, similique totam, vero dolores ipsum repellendus labore at consequatur.
+   featured_image: /images/placeholder-project.png      
 ---
 
+
+<!-------- Header -------->
+
+<section class="bg-image bg-plant-2 padded tall-60 grid-middle-right">
+    <div class="col-6-middle right">
+        <h2>Our Services</h2>   
+        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus ex ut, eaque ratione amet neque ipsum? Cupiditate ipsam voluptatem quia corporis repellendus inventore perspiciatis illum totam nihil maiores! Molestiae, consequuntur?</p>
+    </div>
+</section> 
+
+<!-------- Info section -------->
+
+<section class="padded bg-green">
+    <div class="capped-width grid">
+        <div class="col-4_sm-12 padded-1">
+            <h3>Design.</h3>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla ratione beatae, placeat nesciunt omnis enim quaerat voluptate. Neque autem, eum rem illo aperiam expedita incidunt, qui aut, velit distinctio explicabo.</p>
+        </div>
+        <div class="col-4_sm-12 padded-1">
+            <h3>Build.</h3>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla ratione beatae, placeat nesciunt omnis enim quaerat voluptate. Neque autem, eum rem illo aperiam expedita incidunt, qui aut, velit distinctio explicabo.</p>
+        </div>
+        <div class="col-4_sm-12 padded-1">
+            <h3>Optimise.</h3>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla ratione beatae, placeat nesciunt omnis enim quaerat voluptate. Neque autem, eum rem illo aperiam expedita incidunt, qui aut, velit distinctio explicabo.</p>
+        </div>
+        <div class="col-12-middle center margin-t-2">
+            <a href="/contact.html" class="button">Get in touch!</a>
+        </div>
+    </div>
+</section>
+
+<!-------- Newsletter Banner  -------->
+
+{% include newsletter_banner.html %}
+
+<!-------- Features  -------->
+
 <section>
-    Services
+    
+    {% for item in page.features %}
+    <div class="grid flex-flip-alternate">
+        
+        <div class="col-5_sm-12-middle padded">
+            <h3>{{item.title}}</h3>
+            <p>{{item.description}}</p>
+        </div>
+        <div class="col-7_sm-12-middle padded">
+            <img src="{{item.featured_image}}" alt="{{item.feature-title}}">    
+        </div>    
+
+ </div>
+    {% endfor %}
+        
 </section>
