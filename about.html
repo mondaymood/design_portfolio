@@ -5,14 +5,16 @@ team:
    bio: Big Boss Coder
    description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque voluptate consequatur natus a veritatis.
    profile_image: /images/profile-1.jpg
- - name: Greg
+ - name: Richard
    bio: Big Boss Coder
    description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque voluptate consequatur natus a veritatis.
    profile_image: /images/profile-2.jpg
- - name: Greg
+ - name: Maja
    bio: Big Boss Coder
    description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque voluptate consequatur natus a veritatis.    
-   profile_image: /images/profile-3.jpg  
+   profile_image: /images/profile-3.jpg
+about-video-id: b22f3_qxnFo
+header-image: /images/plant.jpg     
 ---
 
 <section class="tall-60 grid bg-green">
@@ -20,20 +22,39 @@ team:
         <h2> Meet our growing family</h2>   
         <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus ex ut, eaque ratione amet neque ipsum? Cupiditate ipsam voluptatem quia corporis repellendus inventore perspiciatis illum totam nihil maiores! Molestiae, consequuntur?</p>
     </div>
-    <div class="col-7_sm-10 bg-image bg-plant "></div>
+    <div class="col-7_sm-10 bg-image" style="background-image: url('{{page.header-image}}');"></div>
 </section> 
 
 <!-- Team members -->
 
 <section class="padded">
-    {% for item in page.team %}
-        <div class="grid">
-            <div class="col-5">
-                <img src="{{item.profile_image}}">
-                <h3> {{item.name}}</h3>
+
+    <div class="capped-width">
+    
+        {% for item in page.team %}
+        <div class="grid-center flex-flip-alternate team">
+            <div class="col-5 padded-2"><img src="{{item.profile_image}}"></div>
+            <div class="col-5-middle padded-1">
+                <h3>Meet {{item.name}}</h3>
                 <p><strong>{{item.bio}}</strong></p>
                 <p>{{item.description}}</p>
             </div>
         </div>
     {% endfor %}
+    
+    </div>
+
+</section> 
+
+
+<!-- Video banner -->
+
+<section class="padded bg-green center">
+
+    <h2 class="editable">Watch our video</h2>
+    <p class="emphasis editable">Feat our adorable office pup</p>
+    <div class="padded-1">
+        <div class='embed-container'><iframe src='https://www.youtube.com/embed/{{page.about-video-id}}' frameborder='0' allowfullscreen></iframe></div>
+    </div>
+
 </section> 
